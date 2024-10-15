@@ -45,7 +45,7 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  return numbers.reduce((sum, num) => sum = num, 0);// TODO
+  return numbers.reduce((sum, num) => sum + num, 0);// TODO
 }
 
 /**
