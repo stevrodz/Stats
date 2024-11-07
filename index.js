@@ -61,7 +61,7 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  return Math.min(...numbers);// TODO
+  return customMin(numbers);// TODO
 }
 
 /**
@@ -69,7 +69,7 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  return Math.max(...numbers);// TODO
+  return customMax(numbers);// TODO
 }
 
 /**
@@ -94,4 +94,26 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   return numbers.filter(num => num % 2 !== 0);// TODO
+}
+
+// Custom function to find the maximum number in an array
+function customMax(numbers) {
+  let max = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
+}
+
+// Custom function to find the minimum number in an array
+function customMin(numbers) {
+  let min = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+  }
+  return min;
 }
